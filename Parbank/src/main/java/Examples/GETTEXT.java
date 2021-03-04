@@ -20,7 +20,7 @@ public class GETTEXT {
 	        driver.get("https://parabank.parasoft.com/");
 	        
 	        //Send USERNAME
-	     WebElement ele=   driver.findElement(By.xpath("//*[@id=\"rightPanel\"]/ul[3]/li[2]/a"));
+	       WebElement ele=   driver.findElement(By.xpath("//*[@id=\"rightPanel\"]/ul[3]/li[2]/a"));
 	        
 	        
 	        String TEXTS = ele.getText();
@@ -28,6 +28,9 @@ public class GETTEXT {
 	        System.out.println(TEXTS);
 	        
 	        
+	   driver.findElement(By.tagName("a")).click();
+	        
+
 
 	}
 

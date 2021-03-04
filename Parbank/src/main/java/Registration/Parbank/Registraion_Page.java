@@ -23,32 +23,39 @@ public class Registraion_Page
 	        //Click on Register Link
 	        driver.findElement(By.xpath("//*[@id=\'loginPanel\']/p[2]/a")).click();
 	        
-	        //Send FirstName
-	        driver.findElement(By.xpath("//*[@id=\'customer.firstName\']")).sendKeys("Girish");
+	        
+	        
+	        //   driver.findElement(By.linkText("Register")).click();
+	        
+		     //   driver.findElement(By.partialLinkText("Regi")).click();
+		        
 	        
 	        //Send FirstName
-	        driver.findElement(By.xpath("//*[@id=\'customer.lastName\']")).sendKeys("Rathode");
+	        driver.findElement(By.id("customer.firstName")).sendKeys("Girish");
+	        
+	        //Send FirstName
+	        driver.findElement(By.id("customer.lastName")).sendKeys("Rathode");
 
 	        //Address
-	        driver.findElement(By.xpath("//*[@id=\'customer.address.street\']")).sendKeys("#100,Church Street");
+	        driver.findElement(By.name("customer.address.street")).sendKeys("#100,Church Street");
 	        
 	        //City
-	        driver.findElement(By.xpath("//*[@id=\'customer.address.city\']")).sendKeys("Austin");
+	        driver.findElement(By.name("customer.address.city")).sendKeys("Austin");
 	        
 	        //State
-	        driver.findElement(By.xpath("//*[@id=\'customer.address.state\']")).sendKeys("Alska");
+	        driver.findElement(By.cssSelector("#customer\\.address\\.state")).sendKeys("Alska");
 	        
 	        //ZipCode
-	        driver.findElement(By.xpath("//*[@id=\'customer.address.zipCode\']")).sendKeys("123456");
+	        driver.findElement(By.cssSelector("#customer\\.address\\.zipCode")).sendKeys("123456");
 	        
 	        //Phone
 	        driver.findElement(By.xpath("//*[@id=\'customer.phoneNumber\']")).sendKeys("1237894560");
 	        
 	        //SSN
-	        driver.findElement(By.xpath("//*[@id=\'customer.ssn\']")).sendKeys("AL2021100");	        
+	        driver.findElement(By.xpath("//*[@name='customer.ssn']")).sendKeys("AL2021100");	        
 	        
 	        //Username
-	        driver.findElement(By.xpath("//*[@id=\'customer.username\']")).sendKeys("AL2021100");    
+	        driver.findElement(By.xpath("//*[@id=\'customer.username\']")).sendKeys("AL202104");    
 	        
 	        //Password
 	        driver.findElement(By.xpath("//*[@id=\'customer.password\']")).sendKeys("Devil@1234");	        
@@ -59,8 +66,7 @@ public class Registraion_Page
 	        //Click on Register Button
 	        driver.findElement(By.xpath("//*[@id=\'customerForm\']/table/tbody/tr[13]/td[2]/input")).click();	        
 	        
-	        
-	        
+	        	        
 	}
 
 }
