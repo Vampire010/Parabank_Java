@@ -1,7 +1,12 @@
 package Registration.Parbank;
 
-import org.openqa.selenium.By;
+import java.io.File;
 
+import org.apache.commons.*;
+import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.By;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -36,6 +41,10 @@ public class Registraion_Page
 	        //Send FirstName
 	        driver.findElement(By.id("customer.lastName")).sendKeys("Rathode");
 
+	        
+	        
+	        
+	        
 	        //Address
 	        driver.findElement(By.name("customer.address.street")).sendKeys("#100,Church Street");
 	        
@@ -55,7 +64,7 @@ public class Registraion_Page
 	        driver.findElement(By.xpath("//*[@name='customer.ssn']")).sendKeys("AL2021100");	        
 	        
 	        //Username
-	        driver.findElement(By.xpath("//*[@id=\'customer.username\']")).sendKeys("AL202104");    
+	        driver.findElement(By.xpath("//*[@id=\'customer.username\']")).sendKeys("AL202107");    
 	        
 	        //Password
 	        driver.findElement(By.xpath("//*[@id=\'customer.password\']")).sendKeys("Devil@1234");	        
@@ -64,9 +73,23 @@ public class Registraion_Page
 	        driver.findElement(By.xpath("//*[@id=\'repeatedPassword\']")).sendKeys("Devil@1234");      
 	        
 	        //Click on Register Button
-	        driver.findElement(By.xpath("//*[@id=\'customerForm\']/table/tbody/tr[13]/td[2]/input")).click();	        
+	        driver.findElement(By.xpath("//*[@id=\'customerForm\']/table/tbody/tr[13]/td[2]/input")).submit();	   
 	        
-	        	        
+	        //Take the screenshot
+	       TakesScreenshot ts =((TakesScreenshot)driver);
+	        
+	        File srcfile =ts.getScreenshotAs(OutputType.FILE);
+	        
+	        try
+	        {
+	        	FileUtils.copyFile(srcfile, new File("./SCREENSHOTS_TS/Screnshot.png"));
+	        	
+	        }
+	        catch(Exception e)
+	        {
+	        	
+	        	System.out.println(e);
+	        } 
 	}
 
 }
