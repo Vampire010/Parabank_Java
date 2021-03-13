@@ -61,10 +61,10 @@ public class Registraion_Page
 	        driver.findElement(By.xpath("//*[@id=\'customer.phoneNumber\']")).sendKeys("1237894560");
 	        
 	        //SSN
-	        driver.findElement(By.xpath("//*[@name='customer.ssn']")).sendKeys("AL2021100");	        
+	        driver.findElement(By.xpath("//*[@name='customer.ssn']")).sendKeys("AL2021113");	        
 	        
 	        //Username
-	        driver.findElement(By.xpath("//*[@id=\'customer.username\']")).sendKeys("AL202107");    
+	        driver.findElement(By.xpath("//*[@id=\'customer.username\']")).sendKeys("AL2021113");    
 	        
 	        //Password
 	        driver.findElement(By.xpath("//*[@id=\'customer.password\']")).sendKeys("Devil@1234");	        
